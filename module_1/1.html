@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="2"></p>          <!-- 2 -->
+    <p id="3"></p>          <!-- 3 -->
+    <p id="4"></p>          <!-- 4 -->
+    <p id="5"></p>          <!-- 5 -->
+    <p id="6"></p>          <!-- 6 -->
+    <p id="7"></p>          <!-- 7 -->
+    <script>
+        console.log("I'm printing to console!")             //1
+        const greet = prompt("Anna nimesi: ")               //2
+        m = `Hello, ${greet}!`
+        document.getElementById("2").textContent = m;
+        const a = Number(prompt("Anna luku1: "))            //3
+        const b = Number(prompt("Anna luku2: "))
+        const c = Number(prompt("Anna luku3: "))
+        s = a + b + c
+        k = a * b * c
+        ks = (a + b + c) / 3
+        m1 = `Sum: ${s}, koostumus: ${k}, keskiarvo: ${ks}.`
+        document.getElementById("3").textContent = m1;
+        const n = prompt("Anna nimesi, young wizard: ")         //4
+        const f = Math.floor(Math.random() * 4) + 1;
+        let h;
+        if (f == 1) {
+            h = "Slytherin"
+        } else if (f == 2) {
+            h = "Gryffindor"
+        } else if (f == 3) {
+            h = "Ravenclaw"
+        } else {
+            h = "Hufflepuff"
+        }
+        m2 = `${n}, you are ${h}.`
+        document.getElementById("4").textContent = m2;
+        const y = Number(prompt("Anna vuosi: "))        //5
+        if (y % 400 === 0) {
+            m3 = `${y} on karkausvuosi.`
+        } else if ((y % 4 === 0) && (y % 100 !== 0)) {
+            m3 = `${y} on karkausvuosi.`
+        } else {
+            m3 = `${y} ei ole karkausvuosi.`
+        }
+        document.getElementById("5").textContent = m3;
+
+        const cс = confirm("Should i calculate square root?")            //6
+        if (cс == false) {
+            m4 = `Calculation is cancelled.`
+        } else {
+            const c1 = Number(prompt("Anna luku: "))
+            if (c1 < 0) {
+                m4 = `Error!`
+            } else {
+                c2 = Math.sqrt(c1)
+                m4 = `Square root of ${c1} is ${c2}.`
+            }
+        }
+        document.getElementById("6").textContent = m4;
+
+        const nu = Number(prompt("Anna heittojen määrä: "))      //7
+        let sum = 0;
+        for (let i = 0; i < nu; i++) {
+            sum += Math.floor(Math.random() * 6) + 1
+        }
+        document.getElementById("7").textContent = `Sum: ${sum}`;
+    </script>
+</body>
+</html>

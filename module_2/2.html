@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ol id="2"></ol>       <!-- 2 -->
+    <ul id="3"></ul>       <!-- 3 -->
+
+    <script>
+        let n = []          //1
+        let i = 0;
+        for (i = 0; i < 5; i++) {
+            const n1 = Number(prompt("Anna luku: "))
+            n.push(n1)
+        }
+        let i1 = n.length - 1;
+        for (i1; i1 >= 0; i1--) {
+            console.log(n[i1])
+        }
+
+        let m0 = [];            //2
+        const m = Number(prompt("Anna osallistujien lukumäärä: "))
+        for (i = 0; i < m; i++) {
+            const m1 = prompt("Anna osallistujien nimet: ")
+            m0.push(m1)
+        }
+        m0.sort()
+        for (i = 0; i < m0.length; i++) {
+            document.getElementById("2").innerHTML += `<li>${m0[i]}</li>`;
+        }
+
+        let k = [];         //3
+        for (i = 0; i < 6; i++) {
+            const k1 = prompt("Anna koiran nimi: ")
+            k.push(k1)
+        }
+        k.sort()
+        k.reverse()
+        for (i = 0; i < k.length; i++) {
+            document.getElementById("3").innerHTML += `<li>${k[i]}</li>`;
+        }
+
+        let l = [];             //4
+        while (true) {
+            const l1 = Number(prompt("Anna luku: "))
+            if (l1 == 0) {
+                break
+            } else {
+                l.push(l1)
+            }
+        }
+        l.sort((a, b) => b - a)
+        console.log(l)
+
+        let r = [];             //5
+        while (true) {
+            const r1 = Number(prompt("Anna luku: "))
+            if (r.includes(r1)) {
+                alert("Number already given!")
+                break
+            } else {
+                r.push(r1)
+            }
+        }
+        r.sort((a, b) => a - b)
+        console.log(r)
+    </script>
+
+</body>
+</html>
